@@ -1,0 +1,25 @@
+# TODO — proofdown_renderer
+
+- [ ] Public API
+  - [ ] `RenderContext` fields (id slugger, allowlist, limits)
+  - [ ] `to_html(doc_ast, &RenderContext) -> Result<String, RenderError>`
+  - [ ] Error types with spans and actionable messages
+- [ ] Determinism
+  - [ ] Stable id/slug generation and collision policy
+  - [ ] Stable attribute ordering and whitespace rules
+  - [ ] Newline normalization to `\n`
+- [ ] Components (initial, per spec)
+  - [ ] Structural: `grid`, `card`
+  - [ ] Artifact viewers: `artifact.summary`, `artifact.table`, `artifact.json`, `artifact.markdown`, `artifact.image`, `artifact.link`
+  - [ ] Unknown components -> error
+- [ ] Sanitization
+  - [ ] Escape text; sanitize attributes (types, bounds)
+  - [ ] No raw HTML execution
+- [ ] Limits
+  - [ ] Node/Include depth limits with clear error banner
+- [ ] Tests
+  - [ ] Unit tests per component
+  - [ ] Golden HTML tests (byte-equal)
+- [ ] WASM
+  - [ ] `wasm-bindgen` bindings (feature)
+  - [ ] Worker integration notes

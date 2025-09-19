@@ -1,0 +1,15 @@
+[package]
+name = "proofdown_renderer"
+version = "0.1.0"
+edition = "2021"
+description = "Deterministic Proofdown AST to safe HTML renderer"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "proofdown_renderer"
+path = "src/lib.rs"
+
+[features]
+default = []
+
+[dev-dependencies]
